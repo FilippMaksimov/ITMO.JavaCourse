@@ -3,15 +3,11 @@ package ITMO.JavaCourse.Lab02;
 public class Main {
     public static void main(String[] args) {
         //Первое задание
-        long sumRes = Calculator.Calc(799, 1789212L);
-        double devRes = Calculator.Calc(7837.5, 67);
-        double mulRes = Calculator.Calc(5678.1, 156L);
-        long subRes = Calculator.Calc(1999999L, 1562);
         System.out.println("Первое задание");
-        System.out.println(sumRes);
-        System.out.println(devRes);
-        System.out.println(mulRes);
-        System.out.println(subRes);
+        Calculator.getResult(799, 1789212);
+        Calculator.getResult(7837.5f, 67f);
+        Calculator.getResult(5678.1, 156d);
+        Calculator.getResult(1999999L, 1562L);
 
         //Второе задание
         MedicalRecord patient = new MedicalRecord();

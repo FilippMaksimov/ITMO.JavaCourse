@@ -6,7 +6,7 @@ public class MedicalRecord {
     private Float height;
     private Float weight;
     private BloodType bloodType;
-    private Boolean RhFactor;
+    private Boolean rhFactor;
     private String hairColor;
     private String eyeColor;
     private Boolean badHabits;
@@ -25,7 +25,7 @@ public class MedicalRecord {
         this.height = height;
         this.weight = weight;
         this.bloodType = bloodType;
-        this.RhFactor = rhFactor;
+        this.rhFactor = rhFactor;
         this.hairColor = hairColor;
         this.eyeColor = eyeColor;
         this.badHabits = badHabits;
@@ -73,11 +73,11 @@ public class MedicalRecord {
     }
 
     public Boolean getRhFactor() {
-        return RhFactor;
+        return rhFactor;
     }
 
     public void setRhFactor(Boolean rhFactor) {
-        RhFactor = rhFactor;
+        this.rhFactor = rhFactor;
     }
 
     public String getHairColor() {
@@ -121,7 +121,7 @@ public class MedicalRecord {
                 "Рост: " + height + "\n" +
                 "Вес: " + weight + "\n" +
                 "Группа крови: " + bloodType + "\n" +
-                "Резус фактор: " + (RhFactor ? "Rh(+)" : "Rh(-)") + "\n" +
+                "Резус фактор: " + (rhFactor ? "Rh(+)" : "Rh(-)") + "\n" +
                 "Цвет волос: " + hairColor + "\n" +
                 "Цвет глаз: " + eyeColor + "\n" +
                 "Вредные привычки: " + (badHabits ? "Имеются" : "Не имеются") + "\n" +
