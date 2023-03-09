@@ -7,70 +7,57 @@ import java.util.Scanner;
 
 public class Program {
     //FIRST PART
-    public static void firstTask() {
+    public static void oddNumbersOutput() {
         System.out.println("Первое задание" + "\n" + "Нечетные числа от 1 до 99");
-        for (Integer i = 1; i <= 99; i++) {
+        for (int i = 1; i <= 99; i++) {
             if (i % 2 != 0) {
                 System.out.println(i);
             }
         }
     }
 
-    public static void secondTask() {
+    public static void devisionOutput() {
         System.out.println("\n" + "Второе задание");
-        StringBuilder a = new StringBuilder();
-        StringBuilder b = new StringBuilder();
-        StringBuilder c = new StringBuilder();
-        a.append("Делится на 3: ");
-        b.append("Делится на 5: ");
-        c.append("Делится на 3 и на 5: ");
-        for (Integer i = 1; i <= 100; i++) {
+        System.out.print("Делится на 3: ");
+        for (int i = 1; i <= 100; i++) {
             if (i % 3 == 0)
-                a.append(i + ", ");
+                System.out.print(i + ", ");
             else continue;
         }
-        for (Integer i = 1; i <= 100; i++) {
+        System.out.println("");
+        System.out.print("Делится на 5: ");
+        for (int i = 1; i <= 100; i++) {
             if (i % 5 == 0)
-                b.append(i + ", ");
+                System.out.print(i + ", ");
             else continue;
         }
-        for (Integer i = 1; i <= 100; i++) {
+        System.out.println("");
+        System.out.print("Делится на 3 и на 5: ");
+        for (int i = 1; i <= 100; i++) {
             if (i % 3 == 0 && i % 5 == 0)
-                c.append(i + ", ");
+                System.out.print(i + ", ");
             else continue;
         }
-        System.out.println(a);
-        System.out.println(b);
-        System.out.println(c);
+        System.out.println("");
     }
 
-    public static void thirdTask(Integer firstValue, Integer secondValue, Integer result) {
-        boolean sum;
-        if (firstValue + secondValue == result)
-            sum = true;
-        else sum = false;
-        String first = "Введите первое число: " + firstValue;
-        String second = "Введите второе число: " + secondValue;
-        String third = "Введите третье число: " + result;
-        String isRes = "Результат: " + sum;
+    public static Boolean sumCheck(Integer firstValue, Integer secondValue, Integer result) {
         System.out.println("\n" + "Третье задание");
-        System.out.println(first + "\n" + second + "\n" + third + "\n" + isRes);
+        System.out.println("Введите первое число: " + firstValue + "\n" +
+                "Введите второе число: " + secondValue + "\n" +
+                "Введите третье число: " + result);
+        return  (firstValue + secondValue == result);
     }
 
-    public static void forthTask(Integer firstValue, Integer secondValue, Integer thirdValue) {
-        boolean greaterOrLess;
-        if (secondValue > firstValue && thirdValue > secondValue)
-            greaterOrLess = true;
-        else greaterOrLess = false;
-        String first = "Введите первое число: " + firstValue;
-        String second = "Введите второе число: " + secondValue;
-        String third = "Введите третье число: " + thirdValue;
-        String isRes = "Результат: " + greaterOrLess;
+    public static Boolean comparisonCheck(Integer firstValue, Integer secondValue, Integer thirdValue) {
         System.out.println("\n" + "Четвёртое задание");
-        System.out.println(first + "\n" + second + "\n" + third + "\n" + isRes);
+        System.out.println("Введите первое число: " + firstValue + "\n" +
+                "Введите второе число: " + secondValue + "\n" +
+                "Введите третье число: " + thirdValue);
+        return (secondValue > firstValue && thirdValue > secondValue);
     }
 
-    public static void fifthTask(int[] array) {
+    public static void arrayItemsCheck(int[] array) {
         boolean isEqual;
         System.out.println("\n" + "Пятое задание");
         String data = "array = " + Arrays.toString(array);
@@ -82,7 +69,7 @@ public class Program {
         } else System.out.println("Длина массива должна быть больше или равна 2");
     }
 
-    public static void sixthTask(int[] array) {
+    public static void arrayAllItemsCheck(int[] array) {
         boolean isContent = false;
         System.out.println("\n" + "Шестое задание");
         String data = "array = " + Arrays.toString(array);
@@ -96,7 +83,7 @@ public class Program {
     }
 
     //SECOND PART
-    public static void eighthTask(int[] array) {
+    public static void ascSortCheck(int[] array) {
         String res = "OK";
         for (int i = 0; i <= (array.length - 2); i++) {
             if (array[i] > array[i + 1]) {
@@ -108,7 +95,7 @@ public class Program {
         System.out.println("Отсортирован ли массив по возрастанию?" + "\n" + res);
     }
 
-    public static void ninthTask() {
+    public static void arrayRead() {
         System.out.println("\n" + "Вторая часть. Второе задание");
         System.out.println("Array length(input data): ");
         Scanner scanner = new Scanner(System.in);
@@ -122,7 +109,7 @@ public class Program {
         System.out.println("Result: " + Arrays.toString(array));
     }
 
-    public static void tenthTask(int[] array) {
+    public static void arrayItemsExchange(int[] array) {
         System.out.println("\n" + "Вторая часть. Третье задание");
         System.out.println("Array 1: " + Arrays.toString(array));
         int[] editedArray = new int[array.length];
@@ -136,7 +123,7 @@ public class Program {
         System.out.println("Array 2: " + Arrays.toString(editedArray));
     }
 
-    public static void eleventhTask(int[] array) {
+    public static void arrayUniqueItems(int[] array) {
         StringBuilder result = new StringBuilder();
         ArrayList<Integer> unique = new ArrayList<>();
         System.out.println("\n" + "Вторая часть. Четвёртое задание");
