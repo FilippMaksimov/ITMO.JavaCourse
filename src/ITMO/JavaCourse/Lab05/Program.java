@@ -57,8 +57,8 @@ public class Program {
         String[] words = text.split(" ");
         StringBuilder reversedText = new StringBuilder();
         for (String word : words) {
-            StringBuilder reveredWord = new StringBuilder(word);
-            reversedText.append(String.valueOf(reveredWord.reverse().append(" ")));
+            StringBuilder reversedWord = new StringBuilder(word);
+            reversedText.append(String.valueOf(reversedWord.reverse().append(" ")));
         }
         return String.valueOf(reversedText);
     }
