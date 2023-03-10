@@ -24,16 +24,17 @@ public class Program {
     }
 
     public static Boolean palindromeCheck(String word) {
+        word = word.toLowerCase();
         System.out.println("\n" + "Второе задание");
         System.out.println("Является ли слово полиндромом?");
         StringBuilder revWord = new StringBuilder(word);
         return (word.equals(revWord.reverse().toString()));
     }
 
-    public static String textEdit(String text, String[] censorWords) {
+    public static String textEdit(String text, String[] censorWords, String censored) {
         System.out.println("\n" + "Третье задание");
         for (String word : censorWords) {
-            text = text.replaceAll(word, "[Вырезано цензурой]");
+            text = text.replaceAll(word, censored);
         }
         return text;
     }

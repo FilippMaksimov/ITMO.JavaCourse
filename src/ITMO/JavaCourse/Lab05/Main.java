@@ -8,12 +8,12 @@ public class Main {
         System.out.println(Program.mostLongWord(textOne));
         System.out.println(Program.mostLongWord(textTwo));
 
-        System.out.println(Program.palindromeCheck("топот"));
+        System.out.println(Program.palindromeCheck("Топот"));
         System.out.println(Program.palindromeCheck("грохот"));
 
         String[] censorWords = new String[]{"бяка", "бяку", "бякой", "дурак"};
         String originText = "Вот ты бяка! Какой он дурак";
-        System.out.println(Program.textEdit(originText, censorWords));
+        System.out.println(Program.textEdit(originText, censorWords, "[Вырезано цензурой]"));
 
         System.out.println(Program.inputQuantity(textTwo, "новые"));
         System.out.println(Program.inputQuantity(textTwo, "вирус"));
