@@ -25,16 +25,17 @@ public class Program {
 
     public static Boolean palindromeCheck(String word) {
         System.out.println("\n" + "Второе задание");
-        System.out.println("Является ли слово полиндромом");
-        StringBuilder origWord = new StringBuilder(word);
+        System.out.println("Является ли слово полиндромом?");
         StringBuilder revWord = new StringBuilder(word);
-        return (origWord.toString().equals(revWord.reverse().toString()));
+        return (word.equals(revWord.reverse().toString()));
     }
 
-    public static String textEdit(String text) {
+    public static String textEdit(String text, String[] censorWords) {
         System.out.println("\n" + "Третье задание");
-        String censorText = text.replaceAll("бяка", "[Вырезано цензурой]");
-        return censorText;
+        for (String word : censorWords) {
+            text = text.replaceAll(word, "[Вырезано цензурой]");
+        }
+        return text;
     }
 
     public static Integer inputQuantity(String mainString, String subString) {

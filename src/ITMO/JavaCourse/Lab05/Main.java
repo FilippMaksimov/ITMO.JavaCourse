@@ -11,8 +11,9 @@ public class Main {
         System.out.println(Program.palindromeCheck("топот"));
         System.out.println(Program.palindromeCheck("грохот"));
 
-        String originText = "Вот ты бяка!";
-        System.out.println(Program.textEdit(originText));
+        String[] censorWords = new String[]{"бяка", "бяку", "бякой", "дурак"};
+        String originText = "Вот ты бяка! Какой он дурак";
+        System.out.println(Program.textEdit(originText, censorWords));
 
         System.out.println(Program.inputQuantity(textTwo, "новые"));
         System.out.println(Program.inputQuantity(textTwo, "вирус"));
